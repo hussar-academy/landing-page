@@ -1,0 +1,16 @@
+{
+  "name": "pwrapp",
+  "version": "1.0.0",
+  "description": "Koło Naukowe Tworzenia Aplikacji Webowych",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "Monterail",
+  "homepage": "http://www.monterail.com/",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^3.2.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^2.2.0"
+  }
+}
