@@ -1,2 +1,97 @@
-h1
-  color: red
+@import "config"
+
+$secondary-font: 'Merriweather', serif
+
+@import "foundation"
+
++foundation-everything
+
+body
+  padding-top: 100vh
+
+.top-bar
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 100
+
+.rocket-image
+  transform: translateX(200%)
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+
+.section--full
+  overflow: hidden
+
+  &:hover
+    .rocket-image
+      transform: translateY(0)
+
+.center-vertically
+  position: absolute
+  top: 50%
+  left: 0
+  right: 0
+  transform: translateY(-50%)
+
+  .columns
+    display: inline-block
+    vertical-align: middle
+
+.section
+  z-index: 3
+  position: relative
+  padding: rem-calc(60px 0)
+  background: #fff
+
+.section--full
+  height: 100vh
+
+.section--fixed
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  background-image: url('images/bg.jpg')
+  background-size: cover
+  text-align: center
+  z-index: 1
+
+.section--highlights
+  background: #42B7FB
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2)
+  color: #fff
+
+  .paragraph
+    color: #fff
+
+.hero
+  color: #fff
+  font:
+    size: rem-calc(72px)
+    weight: bold
+
+.h1
+  font:
+    size: rem-calc(56px)
+    weight: bold
+
+.h3
+  font-weight: bold
+  text-transform: uppercase
+  margin-bottom: 2rem
+  margin-top: 1rem
+
+.paragraph
+  font:
+    family: $secondary-font
+    size: rem-calc(18px)
+  line-height: 1.8
+  color: #555
+
+  &--intro
+    font-size: rem-calc(22px)
+    color: white
+
+.paragraph--secondary
+  font-size: 22px

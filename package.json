@@ -8,6 +8,7 @@
   "author": "Monterail",
   "homepage": "http://www.monterail.com/",
   "devDependencies": {
+    "foundation-sites": "^6.2.0",
     "gulp": "^3.9.1",
     "gulp-connect": "^3.2.1",
     "gulp-jade": "^1.1.0",
