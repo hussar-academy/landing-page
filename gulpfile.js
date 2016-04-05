@@ -2,19 +2,22 @@ var gulp = require("gulp");
 var sass = require("gulp-sass");
 var jade = require("gulp-jade");
 var connect = require('gulp-connect');
+var plumber = require('gulp-plumber');
 
 gulp.task("sass", function () {
   return gulp.src("./app/style.sass")
+    .pipe(plumber())
     .pipe(sass({
       includePaths: ['node_modules/foundation-sites/scss']
-    }).on('error', sass.logError))
+    }))
     .pipe(gulp.dest("./public/"));
 });
 
 gulp.task("jade", function() {
     return gulp.src("./app/index.jade")
-        .pipe(jade())
-        .pipe(gulp.dest("./public/"));
+      .pipe(plumber())
+      .pipe(jade())
+      .pipe(gulp.dest("./public/"));
 });
 
 gulp.task("connect", function() {
@@ -42,7 +45,7 @@ gulp.task("images", function () {
 gulp.task("watch", function() {
   gulp.watch("./app/images/*", ["images"]);
   gulp.watch("./app/*.sass", ["sass"]);
-  gulp.watch("./app/*/*.jade", ["jade"]);
+  gulp.watch("./app/**/*.jade", ["jade"]);
   gulp.watch("./public/index.html", ["html"]);
   gulp.watch("./public/style.css", ["css"]);
 });
