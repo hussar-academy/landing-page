@@ -1,0 +1,27 @@
+section.top-bar
+  nav.top-bar-center
+    ul.dropdown.menu(data-dropdown-menu='')
+      li.menu-text.topbar__logo
+        span.topbar--monte Monte
+        span PWR
+      li.navigation__item
+        a.navigation__link.navigation__link--active(href='#') Home
+      li.navigation__item
+        a.navigation__link(href='#') Information
+      li.navigation__item
+        a.navigation__link(href='#') Footer
+
+i.fa.fa-bars.mobile__icon--open(id="mobileOpen")
+section.mobile-menu(id="mobileMenu")
+  i.fa.fa-close.mobile__icon--close(id="mobileClose")
+  ul.mobile__list
+    li.mobile__li.mobile__logo
+      i.fa.fa-hashtag
+      span.mobile__logo--bold Monte
+      span.mobile__logo--text PWR
+    li.mobile__li
+      a.mobile__a Home
+    li.mobile__li
+      a.mobile__a Information
+    li.mobile__li
+      a.mobile__a Footer
