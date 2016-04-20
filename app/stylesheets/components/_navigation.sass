@@ -9,7 +9,7 @@
     bottom: 0
     content: ""
     width: 50%
-    background: black
+    background: $global-font-color
     height: 2px
     right: 0
     left: 0
@@ -22,4 +22,10 @@
 
     &:after
       width: 80%
+      color:
       transition: width 0.1s ease-in-out
+
+.navigation__link--active
+  font-weight: $global-font-bold
+  letter-spacing: 2px
+  color: white

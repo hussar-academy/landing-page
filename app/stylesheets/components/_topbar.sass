@@ -1,6 +1,47 @@
+// CONFIG
+$topbar-font-family: $global-font-family
+$topbar-font-weight: $global-font-weight
+$topbar-font-color: $global-font-color
+$topbar-height: $global-topbar-height
+$topbar-background: $global-topbar-background
+$topbar-mobile-width: $global-topbar-mobile-width
+$topbar-animation-duration: 0.5s
+
 .top-bar
   position: fixed
   top: 0
   left: 0
   right: 0
   z-index: 100
+  font:
+    family: $topbar-font-family
+    weight: $topbar-font-weight
+  color: $topbar-font-color
+  justify-content: center
+  background: $topbar-background
+  height: $topbar-height
+
+  @media screen and (max-width: $topbar-mobile-width)
+    display: none
+
+  .dropdown
+    position: relative
+    background: $topbar-background
+
+  .navigation__link
+    color: $topbar-font-color
+
+.topbar__logo
+  font-weight: $global-font-normal
+  transition: letter-spacing $topbar-animation-duration ease-in-out
+
+  &:hover
+    cursor: pointer
+    letter-spacing: 3px
+
+    .topbar--monte
+      color: $global-monte-color
+
+.topbar--monte
+  transition: color $topbar-animation-duration ease-in-out
+  font-weight: $global-font-bold
